@@ -1,0 +1,15 @@
+<form>
+  <div class="input-group mb-3 mt-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Buscar</span>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Digite o nome do filme"
+      [(ngModel)]="filter"
+      name="filter"
+      (ngModelChange)="onInputChange($event)"
+    />
+  </div>
+</form>
