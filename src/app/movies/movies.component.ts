@@ -8,11 +8,22 @@ import { MoviesService } from './movies.service';
 })
 export class MoviesComponent implements OnInit {
   movies = [];
-
+  moviesAll = [];
   filter = "";
 
   onInputChange(name) {
-    console.log(name);
+
+    if(this.moviesAll.length === 0){
+      this.moviesAll = this.movies;
+    }
+
+    if(name.trim().length === 0)
+       this.movies = this.moviesAll;
+    else { 
+      const filter = this.movies.filter(movie => movie.title.toLowerCase().match(name));
+      this.movies = filter;
+    }
+
   }
 
   constructor(private moviesService: MoviesService) { }
