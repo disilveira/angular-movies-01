@@ -1,0 +1,19 @@
+<div class="jumbotron" style="background-image: url('http://image.tmdb.org/t/p/w1920_and_h800_multi_faces/{{movie.backdrop_path}}');">
+
+    <div class="row" style="padding: 10px;">
+
+        <div class="col-sm-2" style="padding: 10px;">
+            <div class="card">
+                <img class="card-img-top" src="https://image.tmdb.org/t/p/w220_and_h330_face{{movie.poster_path}}" alt="{{ movie.title }}" />
+            </div>
+        </div>
+
+        <div class="col-sm-10" style="padding: 10px;">
+            <h1 class="display-4" style="color: white;">{{ movie.title }}</h1>
+            <p class="lead" style="color: white;">{{ movie.overview }}</p>
+            <hr class="my-4" />
+            <p style="color: white;">Average: {{ movie.vote_average }}</p>
+        </div>
+        <p><a routerLink="/" class="btn btn-link" style="color: white;">Voltar</a></p>
+    </div>
+</div>

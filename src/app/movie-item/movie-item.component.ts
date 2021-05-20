@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MovieItemComponent implements OnInit {
 
+  @Input() id: Number;
   @Input() titulo: String;
   @Input() descricao: String;
   @Input() image: String;
