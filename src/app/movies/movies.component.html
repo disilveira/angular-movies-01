@@ -1,22 +1,42 @@
 <form>
-  <div class="input-group mb-3 mt-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">Buscar</span>
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="input-group mb-3 mt-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Buscar</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Digite o nome do filme"
+          [(ngModel)]="filter"
+          name="filter"
+          (ngModelChange)="onInputChange($event)"
+        />
+      </div>
     </div>
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Digite o nome do filme"
-      [(ngModel)]="filter"
-      name="filter"
-      (ngModelChange)="onInputChange($event)"
-    />
+    <div class="col-sm-3">
+      <!--<select 
+      [(ngModel)]="order"
+      name="order"
+      (ngModelChange)="onSelectChange($event)"
+      class="form-control">
+        <option [ngValue]="Title">Order by Title</option>
+        <option [ngValue]="VoteD">Order by Vote Desc</option>
+        <option [ngValue]="VoteA">Order by Vote Asc</option>
+      </select>-->
+    </div>
   </div>
 </form>
 <div class="container mb-5">
   <div class="row">
     <div class="col-sm-3 mb-3" *ngFor="let movie of movies">
-        <app-movie-item [titulo]="movie.title" [descricao]="movie.overview" [image]="movie.poster_path" [id]="movie.id"></app-movie-item>
+      <app-movie-item
+        [titulo]="movie.title"
+        [descricao]="movie.overview"
+        [image]="movie.poster_path"
+        [id]="movie.id"
+      ></app-movie-item>
     </div>
   </div>
 </div>

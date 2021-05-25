@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { MoviesService } from './movies.service';
+import { MoviesStoreService } from './movies-store.service';
 
 @NgModule({
   imports: [
@@ -10,6 +11,6 @@ import { MoviesService } from './movies.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [MoviesService]
+  providers: [MoviesService, MoviesStoreService]
 })
 export class MoviesModule { }

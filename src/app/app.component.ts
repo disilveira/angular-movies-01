@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MoviesStoreService } from './movies/movies-store.service';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "Movies App";
   
-  constructor() { }
+  constructor(
+    private moviesStore: MoviesStoreService
+  ) { }
 
   ngOnInit(): void {
   }

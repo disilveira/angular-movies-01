@@ -10,6 +10,7 @@ export class MoviesComponent implements OnInit {
   movies = [];
   moviesAll = [];
   filter = "";
+  order = "";
 
   onInputChange(name) {
 
