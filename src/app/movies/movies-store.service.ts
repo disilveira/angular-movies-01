@@ -8,16 +8,21 @@ export class MoviesStoreService {
 
   constructor( ) { }
 
-  private readonly _movies = new BehaviorSubject([]);
-  readonly movies$ = this._movies.asObservable();
+  private readonly _order = new BehaviorSubject([]);
+  readonly order$ = this._order.asObservable();
 
-  private get movies() {
-    return this._movies.getValue();
+  private get order() {
+    return this._order.getValue();
   }
 
-  private set movies(val) {
-    this._movies.next(val);
+  private set order(val) {
+    this._order.next(val);
   }
   
-  
+  addOrder(order){
+    this.order = [
+      order
+    ];
+  }
+
 }

@@ -16,15 +16,17 @@
       </div>
     </div>
     <div class="col-sm-3">
-      <!--<select 
+      <label for="order">Ordenar</label>
+      <select 
       [(ngModel)]="order"
       name="order"
       (ngModelChange)="onSelectChange($event)"
       class="form-control">
-        <option [ngValue]="Title">Order by Title</option>
-        <option [ngValue]="VoteD">Order by Vote Desc</option>
-        <option [ngValue]="VoteA">Order by Vote Asc</option>
-      </select>-->
+        <option value="TitleA">Order by Title Asc</option>
+        <option value="TitleD">Order by Title Desc</option>
+        <option value="VoteD">Order by Vote Desc</option>
+        <option value="VoteA">Order by Vote Asc</option>
+      </select>
     </div>
   </div>
 </form>
